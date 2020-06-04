@@ -1,0 +1,164 @@
+@mixin reset-list() {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ 
+@mixin reset() {
+	margin: 0;
+	padding: 0;
+}
+
+@mixin sprite($x: 0, $y: 0, $width: 0, $height: 0) {
+    background-position: $x $y;
+    width: $width;
+    height: $height;
+    background-image: url("../img/sprite.png");
+    background-repeat: no-repeat;
+    display: block;
+}
+
+@mixin pseudo() {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+@mixin visually-hidden() {
+	width: 1px;
+	height: 1px;
+	clip: rect(0 0 0 0);
+	border: 0;
+	padding: 0;
+	position: absolute;
+}
+
+// Стрелочки
+
+// .price__button--mobile {
+// 	display: block;
+// 	position: relative;
+// 	padding-right: 20px;
+// 	border: none;
+// 	color: #00BFFE;
+// 	margin-top: 25px;
+// 	margin-left: auto;
+// 	margin-right: auto;
+// 	cursor: pointer;
+// 	background: none;
+// 	font-weight: 600;
+// 	font-size: 16px;
+// 	line-height: 23px;
+
+// 	&::after {
+// 		@include pseudo();
+// 		width: 7px;
+// 		height: 7px;
+// 		border-left: 1.5px solid $blue;
+// 		border-bottom: 1.5px solid $blue;
+// 		transform: rotate(-45deg);
+// 		left: auto;
+// 		right: 4px;
+// 		top: 8px;
+// 	}
+
+// 	&::before {
+// 		@include pseudo();
+// 		width: 1.5px;
+// 		height: 10px;
+// 		background-color: $blue;
+// 		left: auto;
+// 		right: 7.5px;
+// 		top: 7px;
+// 	}
+
+// 	@media (min-width: $tablet-width) {
+// 		display: none;
+// 	}
+// }
+
+// .price__button--mobile-arrow-down {
+// 	&::after {
+// 		@include pseudo();
+// 		width: 7px;
+// 		height: 7px;
+// 		border-left: 1.5px solid $blue;
+// 		border-bottom: 1.5px solid $blue;
+// 		transform: rotate(-45deg);
+// 		left: auto;
+// 		right: 4px;
+// 		top: 8px;
+// 	}
+
+// 	&::before {
+// 		@include pseudo();
+// 		width: 1.5px;
+// 		height: 10px;
+// 		background-color: $blue;
+// 		left: auto;
+// 		right: 7.5px;
+// 		top: 7px;
+// 	}
+
+// 	@media (min-width: $tablet-width) {
+// 		display: none;
+// 	}	
+// }
+
+// .price__button--mobile-arrow-up {
+// 	&::after {
+// 		@include pseudo();
+// 		width: 7px;
+// 		height: 7px;
+// 		border-left: 1.5px solid $blue;
+// 		border-bottom: 1.5px solid $blue;
+// 		transform: rotate(135deg);
+// 		left: auto;
+// 		right: 4px;
+// 		top: 9px;
+// 	}
+
+// 	&::before {
+// 		@include pseudo();
+// 		width: 1.5px;
+// 		height: 10px;
+// 		background-color: $blue;
+// 		left: auto;
+// 		right: 7.5px;
+// 		top: 8px;
+// 	}
+// 		@media (min-width: $tablet-width) {
+// 		display: none;
+// 	}
+// }
+
+// Гриды
+
+// @supports (display: grid)  {
+//     max-width: none;
+// }
+
+// @supports (display: grid) {
+// 	display: grid;
+// 	grid-template-columns: repeat(auto-fill, minmax(317px, 317px));
+// 	justify-content: space-between;
+// 	grid-row-gap: 50px;
+// 		grid-column-gap: 5.15%;
+// 	margin: initial;
+// }
+
+// Позиционирование img внутри блока
+
+// .contact__map {
+// 	height: auto;
+// 	width: auto;
+// 	overflow: hidden;
+// 	display: flex;
+// }
+
+// .contact__image {
+// 	width: 100%;
+// 	object-fit: cover;
+// 	object-position: center center;
+// }

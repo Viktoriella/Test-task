@@ -1,0 +1,9 @@
+.sidebar__image {
+	width: 100%;
+	height: auto;
+	margin-bottom: 50px;
+
+	@media (max-width: $tablet-width) {
+		display: none;
+	}
+}

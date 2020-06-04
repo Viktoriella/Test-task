@@ -1,0 +1,23 @@
+.banner__title {
+	font-size: 24px;
+	line-height: 30px;
+	color: #ffffff;
+	margin-bottom: 0;
+}
+
+.banner__order {
+	display: inline-block;
+	border-bottom: 1px solid #0087bf;
+}
+
+.banner__link {
+	font-size: 20px;
+	line-height: 30px;
+	color: #ffffff;
+	text-decoration: none;
+
+	&:hover .banner__order,
+	&:active .banner__order {
+		border-bottom: 1px solid #ffffff;
+	}
+}

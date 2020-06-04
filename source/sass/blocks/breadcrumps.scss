@@ -1,0 +1,23 @@
+.breadcrumps {
+	@include reset-list();
+	display: flex;
+	align-items: baseline;
+	margin-bottom: 5px;
+}
+
+.breadcrumps__link {
+	margin-right: 20px;
+	font-size: 14px;
+	color: #587AB0;
+	text-decoration: none;
+
+	&:hover,
+	&:active {
+		color: $dark-blue;
+		border-bottom: 1px solid $dark-blue;
+	}
+}
+
+.breadcrumps__link-main {
+	font-size: 0;
+}

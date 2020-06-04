@@ -1,0 +1,13 @@
+.distributors__title-h3 {
+	@include reset();
+	color: #333333;
+	font-size: 20px;
+	line-height: 24px;
+	font-weight: 400;
+	margin-bottom: 8px;
+	margin-top: 24px;
+}
+
+.distributors__image {
+	margin-bottom: 16px;
+}

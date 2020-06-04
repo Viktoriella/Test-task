@@ -1,0 +1,74 @@
+@font-face {
+	font-family: "TensorFont";
+	src: url(tensorfont.woff2) format("woff2"),
+         url(tensorfont.woff) format("woff");
+	font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+	font-family: "Cbuc-icons";
+	src: url(cbuc-icons.svg) format("svg"),
+		url(cbuc-icons.woff) format("woff"),
+		url(cbuc-icons.eot) format("eot");
+	font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: "Cbuc-icons24";
+	src: url(cbuc-icons24.svg) format("svg"),
+		url(cbuc-icons24.woff) format("woff"),
+		url(cbuc-icons24.eot) format("eot");
+	font-weight: normal;
+    font-style: normal;
+}
+
+// a:active, a:focus { 
+// 	outline: none; 
+// }
+
+// button {
+// 	outline: none; 
+// }
+
+// input {
+// 	outline:none;
+// }
+// input:active, textarea:active {
+// 	outline:none;
+// }
+
+// :focus {
+// 	outline:none;
+// }
+
+html {
+	overflow-x: hidden;
+}
+
+body {
+	color: $dark-grey;
+	background-color: #ffffff;
+	font-family: 'TensorFont';
+	font-weight: normal;
+	font-style: normal;
+	min-width: $mobile-width;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.page-body.lock {
+	overflow: hidden;
+}
+
+.visually-hidden {
+	width: 1px;
+	height: 1px;
+	clip: rect(0 0 0 0);
+	border: 0;
+	padding: 0;
+	position: absolute;
+}
+

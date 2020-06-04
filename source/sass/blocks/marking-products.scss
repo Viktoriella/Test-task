@@ -1,0 +1,50 @@
+.marking-products__container {
+	display: flex;
+	justify-content: space-between;
+	margin-left: -12px;
+	margin-right: -12px;
+	margin-bottom: -24px;
+
+	@media (max-width: $small-tablet-width) {
+		display: block;
+	}
+}
+
+.marking-products__list {
+	flex-basis: 50%;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+.marking-products__item {
+	display: flex;
+	align-items: center;
+	margin-bottom: 8px;
+}
+
+.marking-products__icon {
+	margin-right: 8px;
+}
+
+.marking-products__link {
+	color: $dark-grey;
+	text-decoration: none;
+
+	&:hover .marking-products__subtitle, 
+	&:active .marking-products__subtitle {
+		color: $dark-blue;
+		text-decoration: underline;
+	}
+
+	&:hover .marking-products__date, 
+	&:active .marking-products__date {
+		color: $light-grey;
+		text-decoration: none;
+	}
+}
+
+.marking-products__date {
+	font-size: 13px;
+	color: $light-grey;
+	margin-left: 8px;
+}

@@ -1,0 +1,106 @@
+.feedback {
+	position: relative;
+}
+
+.feedback__title {
+	@include reset();
+	font-size: 24px;
+	font-weight: 400;
+	color: $dark-blue;
+	padding-left: 14px;
+	padding-right: 20px;
+	margin-bottom: 22px;
+}
+
+.feedback__list {
+	@include reset-list();
+}
+
+.feedback__item {
+	padding-top: 12px;
+	padding-left: 14px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	border: 1px solid #e4e4e4;
+	border-radius: 8px;
+	margin-bottom: 8px;
+}
+
+.feedback__item--hidden {
+	display: none;
+}
+
+.feedback__item--show {
+	display: block;
+}
+
+.feedback__author {
+	@include reset();
+	font-style: normal;
+	font-size: 12px;
+	line-height: normal;
+}
+
+.feedback__text {
+	@include reset();
+}
+
+.feedback__wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+.feedback__name {
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 400;
+}
+
+.feedback__city {
+	color: $light-grey;
+}
+
+.feedback__profession {
+	display: block;
+	color: $light-grey;
+	margin-bottom: 10px;
+}
+
+.feedback__text {
+	@include reset();
+	font-size: 15px;
+	line-height: 20px;
+	font-weight: 400;
+}
+
+.feedback__smile {
+	display: inline-block;
+	margin-bottom: -4px;
+	margin-left: 6px;
+	width: 20px;
+	height: 20px;
+	background-image: url("../img/sprite/icon-smile.png");
+	background-size: 20px 20px;
+}
+
+.feedback__show-more {
+	display: block;
+	font-size: 0;
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	bottom: -30px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: transparent;
+	border: none;
+	outline: none;
+	background-image: url("../img/sprite/icon-arrow-down.png");
+	background-size: 25px 25px;
+	cursor: pointer;
+}
+
+.feedback__show-more--show {
+	transform: translateX(-50%) rotate(180deg);
+}

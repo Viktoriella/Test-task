@@ -1,0 +1,29 @@
+.how-works__container {
+	display: flex;
+	justify-content: space-between;
+	margin-left: -12px;
+	margin-right: -12px;
+
+	@media (max-width: $small-tablet-width) {
+		display: block;
+	}
+}
+
+.how-works__title {
+	text-align: center;
+}
+
+.how-works__image {
+	display: block;
+	margin-bottom: 16px;
+}
+
+.how-works__column {
+	flex-basis: 50%;
+	padding-left: 12px;
+	padding-right: 12px;
+
+	@media (max-width: $tablet-width) {
+		width: auto;
+	}
+}

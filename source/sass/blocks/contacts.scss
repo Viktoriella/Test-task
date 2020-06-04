@@ -1,0 +1,35 @@
+.contacts {
+	padding-top: 25px;
+}
+
+.contacts__address-list {
+	@include reset-list();
+}
+
+.contacts__address-link {
+    display: block;
+    overflow: hidden;
+	color: $blue;
+	text-decoration: none;
+	line-height: 24px;
+    font-size: 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    &:hover,
+    &:active {
+    	color: $dark-blue;
+    	text-decoration: underline;
+    }
+}
+
+.contacts__phone-list {
+	@include reset-list();
+}
+
+.contacts__phone-link {
+	line-height: 24px;
+    font-size: 15px;
+    color: $dark-grey;
+    text-decoration: none;
+}

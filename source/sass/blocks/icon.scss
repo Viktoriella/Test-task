@@ -1,0 +1,74 @@
+.icon__home {
+	speak: none;
+	width: 16px;
+	height: 16px;
+	font-family: "Cbuc-icons";
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: 400;
+	color: #587ab0;
+	text-decoration: none;
+	margin-right: 3px;
+
+	&::before {
+		content: "\e920";
+	}
+
+	&:hover {
+		color: $dark-blue;
+	}
+}
+
+.icon__arrow-right {
+	font-family: "Cbuc-icons";
+	speak: none;
+	width: 16px;
+	height: 16px;
+	font-size: 14px;
+	line-height: 14px;
+	color: #587ab0;
+	font-weight: 400;
+
+	&::before {
+		content: "\e666";
+	}
+}
+
+.icon__small-arrow-right {
+	display: inline-block;
+	margin-left: 6px;
+	font-family: "Cbuc-icons";
+	speak: none;
+	height: 0.666em;
+	font-size: 0.666em;
+	line-height: 0.666em;
+	color: #587ab0;
+	
+	&::before {
+		content: "\e740";
+	}
+}
+
+.icon__small-arrow-right--white {
+	width: 20px;
+	height: 20px;
+	color: #ffffff;
+	margin-left: 15px;
+	line-height: 20px;
+	font-size: 20px;
+}
+
+.icon__date {
+	font-family: "Cbuc-icons24";
+	speak: none;
+	width: 14px;
+	height: 14px;
+	font-size: 14px;
+	line-height: 14px;
+	color: $light-grey;
+	margin-right: 5px;
+
+	&::before {
+		content: "\e75f";
+	}
+}

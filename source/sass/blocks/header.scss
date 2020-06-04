@@ -1,0 +1,30 @@
+.header {
+	position: fixed;
+	width: 100%;
+	background-color: #ffffff;
+	box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+	z-index: 3;
+}
+
+.header__logo {
+	display: block;
+	font-size: 0;
+	text-decoration: none;
+	line-height: 0;
+}
+
+.header__heading {
+	display: block;
+	margin-left: 8px;
+	text-decoration: none;
+	color: $dark-blue;
+	font-size: 20px;
+	line-height: 20px;
+	white-space: nowrap;
+
+	&:hover,
+	&:active {
+		color: $dark-blue;
+		border-bottom: 1px solid $dark-blue;
+	}
+}

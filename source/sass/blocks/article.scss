@@ -1,0 +1,153 @@
+.article__section {
+	margin-bottom: 32px;
+}
+
+.article__title-h1 {
+	@include reset();
+	color: #000000;
+	font-weight: 400;
+	font-size: 36px;
+	line-height: 46px;
+	margin-bottom: 5px;
+}
+
+.article__title-h2 {
+	@include reset();
+	color: #000000;
+	font-size: 32px;
+	line-height: 44px;
+	font-weight: normal;
+	margin-bottom: 16px;
+}
+
+.article__title-h3 {
+	@include reset();
+	color: #000000;
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: 400;
+	margin-bottom: 8px;
+}
+
+.article__title-h4 {
+	@include reset();
+	color: #333333;
+	font-size: 20px;
+	line-height: 24px;
+	font-weight: 400;
+	margin-bottom: 8px;
+}
+
+.article__text {
+	@include reset();
+	margin-bottom: 8px;
+}
+
+.article__link {
+	color: $blue;
+	text-decoration: none;
+
+	&:hover,
+	&:active {
+		color: $dark-blue;
+		text-decoration: underline;
+	}
+}
+
+.article__link--equipment {
+	position: relative;
+	z-index: 2;
+
+	&:hover,
+	&:active {
+		color: $dark-blue;
+		text-decoration: underline;
+	}
+}
+
+.article__image,
+.sidebar__image {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.article__list {
+	@include reset-list();
+	margin-bottom: 16px;
+}
+
+.article__o-list {
+	@include reset();
+	margin-left: 24px;
+	margin-bottom: 16px;
+}
+
+.article__sublist {
+	@include reset();
+	margin-left: 24px;
+	list-style: disc;
+}
+
+.article__list--law {
+	list-style: disc;
+	list-style-color: $blue;
+	margin-left: 24px;
+}
+
+.article__sublist--law {
+	list-style: none;
+	margin-left: -24px;
+}
+
+.article__item {
+	margin-bottom: 8px;
+}
+
+.article__item--law {
+	color: $blue;
+}
+
+.article__text--law {
+	color: $dark-grey;
+}
+
+.article__responsibility-list {
+	display: flex;
+	margin-left: -12px;
+	margin-right: -12px;
+
+	@media (max-width: $small-tablet-width) {
+		display: block;
+		margin-left: 0;
+		margin-right: 0;
+		text-align: center;
+	}
+}
+
+.article__responsibility-item {
+	box-sizing: border-box;
+	flex-basis: 33%;
+	padding-left: 12px;
+	padding-right: 12px;
+
+	@media (max-width: $small-tablet-width) {
+		margin-bottom: 16px;
+	}
+}
+
+.article__responsibility-text {
+	background-color: $light-blue;
+	padding: 16px;
+	border-radius: 5px;
+}
+
+.article__date {
+	display: block;
+	text-align: right;
+	color: $light-grey;
+	font-size: 14px;
+	line-height: normal;
+	margin-bottom: 15px;
+	margin-right: 12px;
+}
