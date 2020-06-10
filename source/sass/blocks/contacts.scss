@@ -32,4 +32,9 @@
     font-size: 15px;
     color: $dark-grey;
     text-decoration: none;
+
+    @media (max-width: $small-tablet-width) {
+        font-size: 18px;
+        color: $blue;
+    }
 }

@@ -8,7 +8,6 @@
 	font-weight: 400;
 	color: #587ab0;
 	text-decoration: none;
-	margin-right: 3px;
 
 	&::before {
 		content: "\e920";
@@ -28,6 +27,7 @@
 	line-height: 14px;
 	color: #587ab0;
 	font-weight: 400;
+	margin-right: 3px;
 
 	&::before {
 		content: "\e666";
@@ -56,6 +56,36 @@
 	margin-left: 15px;
 	line-height: 20px;
 	font-size: 20px;
+}
+
+.icon__right-arrow {
+	display: none;
+
+	@media (max-width: $small-tablet-width) {
+		display: inline-block;
+		speak: none;
+		width: 16px;
+		height: 16px;
+		font-family: "Cbuc-icons";
+		font-size: 16px;
+		line-height: 14px;
+		font-weight: 400;
+		color: $light-grey;
+		text-decoration: none;
+		transform: rotate(-90deg);
+		margin-right: 5px;
+
+		&::before {
+			content: "\e686";
+
+		}
+	}
+}
+
+.footer-menu__title--show .icon__right-arrow {
+	@media (max-width: $small-tablet-width) {
+		transform: rotate(0);
+	}
 }
 
 .icon__date {

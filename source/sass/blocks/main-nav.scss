@@ -1,19 +1,31 @@
 .main-nav__submenu {
-	display: none;
-	// position: relative;
-	// z-index: 0;
-	// transform: translateY(-150%);
-	// transition: all 0.3s ease;
+	width: 100%;
+	max-height: 100%;
+	position: fixed;
+	background-color: #ffffff;
+	padding-top: 100px;
+	box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+	z-index: 11;
+	transform: translateY(-100%);
+	transition: all 0.4s ease 0.3s;
+	overflow: auto;
+
+	@media (max-width: $br-900) {
+		padding-top: 85px;
+	}
+
+	@media (max-width: $small-tablet-width) {
+		padding-top: 56px;
+	}
 }
 
 .main-nav__submenu--active {
-	display: block;
-	// transform: translateY(0);
+	// display: block;
+	transform: translateY(0);	
 }
 
 .main-nav__burger {
 	display: block;
-	margin-top: 2px;
 	position: relative;
 	cursor: pointer;
 	font-size: 0;
@@ -23,6 +35,13 @@
 	background-color: transparent;
 	border: none;
 	outline: none;
+	margin-top: 16px;
+	margin-left: 18px;
+
+	@media (max-width: $small-tablet-width) {
+		margin-top: 12px;
+		height: 14px;
+	}
 
 	&::before {
 		@include pseudo();
@@ -49,6 +68,10 @@
 	}
 }
 
+.container__header--scrolled .main-nav__burger {
+	height: 14px;
+}
+
 .main-nav__burger:hover::before {
 	background-color: $orange;
 }
@@ -66,6 +89,7 @@
 	top: 50%;
 	left: 0;
 	transform: translateY(-50%);
+	opacity: 1;
 }
 
 .main-nav__burger--closed {
@@ -78,10 +102,34 @@
 		transform: rotate(-45deg);
 		bottom: 8px;
 	}
+
+	@media (max-width: $small-tablet-width) {
+		&::before {
+			transform: rotate(45deg);
+			top: 6px;
+		}
+
+		&::after {
+			transform: rotate(-45deg);
+			bottom: 6px;
+		}
+	}
+}
+
+.container__header--scrolled .main-nav__burger--closed {
+	&::before {
+		transform: rotate(45deg);
+		top: 6px;
+	}
+
+	&::after {
+		transform: rotate(-45deg);
+		bottom: 6px;
+	}
 }
 
 .main-nav__burger--closed span {
-	display: none;
+	opacity: 0;
 }
 
 .main-nav__list {
@@ -93,20 +141,26 @@
 .main-nav__list--mobile {
 	display: none;
 	
-	@media (max-width: $smaller-tablet-width) {
+	@media (max-width: $br-900) {
 		display: flex;
 		justify-content: flex-end;
 	}
 
 	@media (max-width: $small-tablet-width) {
 		justify-content: space-between;
+		margin-left: -16px;
+		margin-right: -16px;
+	}
+
+	@media (max-width: 450px) {
+		flex-wrap: wrap;
 	}
 }
 
 .main-nav__list--desktop {
 	justify-content: space-between;
 
-	@media (max-width: $smaller-tablet-width) {
+	@media (max-width: $br-900) {
 		display: none;
 	}
 }
@@ -116,13 +170,74 @@
 	padding-right: 16px;
 }
 
+.main-nav__list--mobile .main-nav__item {
+	@media (max-width: $small-tablet-width) {
+		box-sizing: border-box;
+		flex-basis: 25%;
+		padding-left: 0;
+		padding-right: 0;
+		background-color: #f9f9f9;
+	}
+
+	@media (max-width: 450px) {
+		flex-basis: 50%;
+	}
+}
+
 .main-nav__link {
 	display: block;
+	position: relative;
 	font-weight: 400;
 	font-size: 20px;
 	line-height: 18px;
 	color: #333333;
 	text-decoration: none;
+	border-bottom: 4px solid transparent;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	transition: all 0.3s ease;
+
+	&:hover {
+		border-bottom-color: rgba(0,0,0,0.2);
+	}
+
+	&::after {
+		@include pseudo();
+		width: 0;
+		height: 10px;
+		border-right: 1px dotted #ccc;
+		left: auto;
+		right: -18px;
+		top: 20px;
+		cursor: auto;
+
+		@media (max-width: $small-tablet-width) {
+			display: none;
+		}
+	}
+}
+
+.main-nav__list--mobile .main-nav__link {
+	padding-bottom: 18px;
+
+	@media (max-width: $small-tablet-width) {
+		box-sizing: border-box;
+		font-size: 16px;
+		border-right: 1px solid #e4e4e4;
+		border-bottom: 1px solid #e4e4e4;
+		text-align: center;
+
+		&:hover,
+		&:active {
+			box-shadow: inset 2px -1px 8px rgba(0,0,0,0.2);
+		}
+	}
+}
+
+.container__header--scrolled .main-nav__link {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	font-size: 18px;
 }
 
 .main-nav__submenu-list {
@@ -133,19 +248,18 @@
 
 	@media (max-width: $small-tablet-width) {
 		display: block;
+		padding-top: 16px;
 	}
 }
 
 .main-nav__submenu-item {
+	position: relative;
 	box-sizing: border-box;
 	flex-basis: 25%;
 	max-width: 25%;
 	padding-left: 12px;
 	padding-right: 12px;
 	padding-bottom: 24px;
-	display: flex;
-	align-items: center;
-	min-height: 72px;
 
 	@media (max-width: $tablet-width) {
 		flex-basis: 33.33333333%;
@@ -158,7 +272,7 @@
 	}
 
 	@media (max-width: $small-tablet-width) {
-		max-width: auto;
+		max-width: 100%;
 	}
 }
 
@@ -166,6 +280,94 @@
 	display: block;
 	color: $dark-grey;
 	text-decoration: none;
-	padding-left: 80px;
 	font-weight: 400;
+	display: flex;
+	align-items: center;
+	padding-right: 10px;
+	border-radius: 5px;
+	height: 64px;
+
+	&:hover {
+		background-color: #f9f9f9;
+	    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+	    text-decoration: none;
+	    color: #000000;
+	}
+}
+
+.main-nav__submenu-icon {
+	// border: 1px solid red;
+	width: 64px;
+	height: 64px;
+	flex-shrink: 0;
+	border-radius: 5px;
+	margin-right: 12px;
+}
+
+.main-nav__submenu-icon--1 {
+	@include sprite(-20px, -20px, 64px, 64px);
+}
+
+.main-nav__submenu-icon--2 {
+	@include sprite(-20px, -956px, 64px, 64px);
+}
+
+.main-nav__submenu-icon--3 {
+	@include sprite(-20px, -1060px, 64px, 64px);
+}
+
+.main-nav__submenu-icon--4 {
+	@include sprite(-20px, -1164px, 64px, 64px);
+}
+
+.main-nav__submenu-icon--5 {
+	@include sprite(-20px, -1268px, 64px, 64px);
+}
+
+.main-nav__submenu-icon--6 {
+	@include sprite(-20px, -1372px, 64px, 64px);
+}
+
+.main-nav__submenu-icon--7 {
+	@include sprite(-20px, -1476px, 64px, 64px);
+}
+
+.main-nav__submenu-icon--8 {
+	@include sprite(-20px, -1580px, 64px, 64px);
+}
+
+.main-nav__submenu-icon--9 {
+	@include sprite(-20px, -1684px, 64px, 64px);
+}
+
+.main-nav__submenu-icon--10 {
+	@include sprite(-20px, -124px, 64px, 64px);
+}
+
+.main-nav__submenu-icon--11 {
+	@include sprite(-20px, -228px, 64px, 64px);
+}
+
+.main-nav__submenu-icon--12 {
+	@include sprite(-20px, -332px, 64px, 64px);
+}
+
+.main-nav__submenu-icon--13 {
+	@include sprite(-20px, -436px, 64px, 64px);
+}
+
+.main-nav__submenu-icon--14 {
+	@include sprite(-20px, -540px, 64px, 64px);
+}
+
+.main-nav__submenu-icon--15 {
+	@include sprite(-20px, -644px, 64px, 64px);
+}
+
+.main-nav__submenu-icon--16 {
+	@include sprite(-20px, -748px, 64px, 64px);
+}
+
+.main-nav__submenu-icon--17 {
+	@include sprite(-20px, -852px, 64px, 64px);
 }

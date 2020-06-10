@@ -3,6 +3,10 @@
 	line-height: 30px;
 	color: #ffffff;
 	margin-bottom: 0;
+
+	@media (max-width: $small-tablet-width) {
+		margin-bottom: 16px;
+	}
 }
 
 .banner__order {

@@ -1,28 +1,29 @@
 @font-face {
 	font-family: "TensorFont";
-	src: url(tensorfont.woff2) format("woff2"),
-         url(tensorfont.woff) format("woff");
 	font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+	font-style: normal;
+	font-display: swap;
+	src: "url(tensorfont.woff2)",
+         "url(tensorfont.woff)";
 }
 
 @font-face {
 	font-family: "Cbuc-icons";
-	src: url(cbuc-icons.svg) format("svg"),
-		url(cbuc-icons.woff) format("woff"),
-		url(cbuc-icons.eot) format("eot");
 	font-weight: normal;
-    font-style: normal;
+	font-style: normal;
+	src: "url(cbuc-icons.svg)",
+		"url(cbuc-icons.woff)",
+		"url(cbuc-icons.eot)";
+	
 }
 
 @font-face {
 	font-family: "Cbuc-icons24";
-	src: url(cbuc-icons24.svg) format("svg"),
-		url(cbuc-icons24.woff) format("woff"),
-		url(cbuc-icons24.eot) format("eot");
 	font-weight: normal;
     font-style: normal;
+	src: "url(cbuc-icons24.svg)",
+		"url(cbuc-icons24.woff)",
+		"url(cbuc-icons24.eot)";
 }
 
 // a:active, a:focus { 
@@ -44,23 +45,44 @@
 // 	outline:none;
 // }
 
-html {
-	overflow-x: hidden;
-}
 
-body {
+.page-body {
 	color: $dark-grey;
 	background-color: #ffffff;
-	font-family: 'TensorFont';
+	font-family: 'TensorFont', serif;
 	font-weight: normal;
 	font-style: normal;
 	min-width: $mobile-width;
-	font-size: 18px;
-	line-height: 24px;
+	@include adaptive-font(18, 16);
+	line-height: 1.35;
+	scrollbar-width: 0px;
 }
 
 .page-body.lock {
 	overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+.overlay {
+	position: fixed;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: -1;
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+}
+
+.overlay--show {
+	display: block;
+	opacity: 1;
+	z-index: 10;
 }
 
 .visually-hidden {

@@ -5,22 +5,23 @@
 	<title>
 		Обязательная маркировка товаров
 	</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preload" href="css/style.min.css" as="style">
+	<link rel="preload" href="js/script.min.js" as="script">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="css/style.min.css">
 	<meta name="description" content="Обязательная маркировка товаров: список товаров, как работает, последние новости">
 	<meta name="keywords" content="обязательная маркировка товаров, маркировка товаров, обязательная маркировка товаров в 2020 году">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page-body">
 	<div style="display: none;">
 		<include src="build/img/sprite.svg"></include>
 	</div>
 	<header class="header">
-		<div class="container">
-			<div class="container__header">
+		<div class="container__header">
+			<div class="container header__wrapper">
 				<div class="container__logo">
 					<a class="header__logo" href="#">
-						<svg class="header__logo-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106 41" tabindex="0" width="106" height="41">
+						<svg class="header__logo-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106 41" tabindex="0">
 							<path class="header__logo-img-text" d="M4.756 41c-2.948 0-5.231-2.613-4.66-5.507L1.99 25.32C2.56 22.24 5.319 20 8.553 20h7.705l-3.805 3.733h-.666c-1.807 0-3.424 1.307-3.71 3.08L6.754 34c-.285 1.68 1.046 3.267 2.854 3.267h1.807L15.22 41H4.756zm61.75 0c-2.948 0-5.23-2.613-4.66-5.507L63.74 25.32c.57-3.08 3.33-5.32 6.564-5.32h7.704l-3.804 3.733h-.666c-1.808 0-3.425 1.307-3.71 3.08L68.504 34c-.285 1.68 1.047 3.267 2.854 3.267h1.807L76.97 41H66.507zM38.71 26.627l-1.611 8.306C36.432 38.48 33.293 41 29.583 41h-8.846c-2.949 0-5.232-2.707-4.661-5.507l3.33-17.173c.57-3.08 3.328-5.32 6.563-5.32h8.275l-3.805 3.733h-.856c-1.807 0-3.183 1.027-4.04 2.614l-.31.653h7.864c3.615 0 6.278 3.173 5.612 6.627zm-9.227-2.894H27.96c-1.807 0-3.424 1.307-3.71 3.08L22.926 34c-.286 1.68 1.046 3.267 2.853 3.267H27.3c1.808 0 3.425-1.307 3.71-3.08L32.336 27c.285-1.68-1.046-3.267-2.854-3.267zm10.142 11.76c-.57 2.894 1.712 5.507 4.66 5.507h9.798c1.888 0 2.759-1.867 2.759-1.867L58.173 41l3.218-16.707a4.669 4.669 0 0 0-1.331-4.2L59.964 20l-4.756 3.733-2.172 11.294a2.828 2.828 0 0 1-2.759 2.24h-1.236c-1.807 0-3.14-1.587-2.759-3.36l2.43-9.707c.286-1.493-.733-3.08-1.874-4.2h-.19l-4.757 3.733-2.267 11.76z" xmlns="http://www.w3.org/2000/svg"></path>
 							<path class="header__logo-img-wings" d="M101.24 15.093h-.001l-.668-5.574-2.703 3.463 1.491 2.561 1.981.392zM93.184 19.032L87.097 8.736l-5.036-2.654c-.037-.02-.077.023-.055.059l9.368 15.171-7.29 9.355c-.046.06.033.135.09.086l8.716-7.564-.026.022.32-4.179z" xmlns="http://www.w3.org/2000/svg"></path>
 							<path class="header__logo-img-bird" d="M101.239 15.094l4.372-7.383a.042.042 0 0 0-.051-.06l-4.989 1.868.668 5.575zM84.105 1.01c-.033-.028-.082.007-.066.047l7.82 19.632 1.005 2.522.026-.022 8.45-7.254L84.105 1.01z" fill="#4d95d1" xmlns="http://www.w3.org/2000/svg"></path>
@@ -48,51 +49,141 @@
 					<button class="main-nav__burger"><span>Показать всё меню</span></button>
 				</div>
 			</div>
-			<nav class="main-nav__submenu">
-				<ul class="main-nav__list main-nav__list--mobile">
-					<li class="main-nav__item">
-						<a href="#" class="main-nav__link">Оборудование</a>
-					</li>
-					<li class="main-nav__item">
-						<a href="#" class="main-nav__link">Возможности</a>
-					</li>
-					<li class="main-nav__item">
-						<a href="#" class="main-nav__link">Тарифы</a>
-					</li>
-					<li class="main-nav__item">
-						<a href="#" class="main-nav__link">Контакты</a>
-					</li>
-				</ul>
-				<div class="container__subnav">
-					<ul class="main-nav__submenu-list">
-						<li class="main-nav__submenu-item"><a href="#" class="main-nav__submenu-link main-nav__submenu-link--1">Электронные документы</a></li>
-						<li class="main-nav__submenu-item"><a href="#" class="main-nav__submenu-link main-nav__submenu-link--2">Отчётность через интернет</a></li>
-						<li class="main-nav__submenu-item"><a href="#" class="main-nav__submenu-link main-nav__submenu-link--3">Всё о&nbsp;компаниях и&nbsp;владельцах</a></li>
-						<li class="main-nav__submenu-item"><a href="#" class="main-nav__submenu-link main-nav__submenu-link--4">Поиск и&nbsp;анализ закупок</a></li>
-						<li class="main-nav__submenu-item"><a href="#" class="main-nav__submenu-link main-nav__submenu-link--5">ОФД и&nbsp;онлайн-кассы</a></li>
-						<li class="main-nav__submenu-item"><a href="#" class="main-nav__submenu-link main-nav__submenu-link--6">Для магазинов и&nbsp;аптек</a></li>
-						<li class="main-nav__submenu-item"><a href="#" class="main-nav__submenu-link main-nav__submenu-link--7">Для ресторанов, кафе и&nbsp;столовых</a></li>
-						<li class="main-nav__submenu-item"><a href="#" class="main-nav__submenu-link main-nav__submenu-link--8">Для салонов и&nbsp;сферы услуг</a></li>
-						<li class="main-nav__submenu-item"><a href="#" class="main-nav__submenu-link main-nav__submenu-link--9">Заказы и&nbsp;поставки (EDI)</a></li>
-						<li class="main-nav__submenu-item"><a href="#" class="main-nav__submenu-link main-nav__submenu-link--10">Управление бизнес-процессами</a></li>
-						<li class="main-nav__submenu-item"><a href="#" class="main-nav__submenu-link main-nav__submenu-link--11">CRM</a></li>
-						<li class="main-nav__submenu-item"><a href="#" class="main-nav__submenu-link main-nav__submenu-link--12">Корпоративная социальная сеть</a></li>
-						<li class="main-nav__submenu-item"><a href="#" class="main-nav__submenu-link main-nav__submenu-link--13">Управление персоналом</a></li>
-						<li class="main-nav__submenu-item"><a href="#" class="main-nav__submenu-link main-nav__submenu-link--14">Учёт и&nbsp;контроль рабочего времени</a></li>
-						<li class="main-nav__submenu-item"><a href="#" class="main-nav__submenu-link main-nav__submenu-link--15">Бухгалтерия и&nbsp;учёт</a></li>
-						<li class="main-nav__submenu-item"><a href="#" class="main-nav__submenu-link main-nav__submenu-link--16">Корпоративный удостоверяющий центр</a></li>
-						<li class="main-nav__submenu-item"><a href="#" class="main-nav__submenu-link main-nav__submenu-link--17">Видео-коммуникации</a></li>
+		</div>
+		<div class="main-nav__submenu">
+			<div class="container">
+				<nav>
+					<ul class="main-nav__list main-nav__list--mobile">
+						<li class="main-nav__item">
+							<a href="#" class="main-nav__link">Оборудование</a>
+						</li>
+						<li class="main-nav__item">
+							<a href="#" class="main-nav__link">Возможности</a>
+						</li>
+						<li class="main-nav__item">
+							<a href="#" class="main-nav__link">Тарифы</a>
+						</li>
+						<li class="main-nav__item">
+							<a href="#" class="main-nav__link">Контакты</a>
+						</li>
 					</ul>
-				</div>
-			</nav>
+					<div class="container__subnav">
+						<ul class="main-nav__submenu-list">
+							<li class="main-nav__submenu-item">
+								<a href="#" class="main-nav__submenu-link">
+									<span class="main-nav__submenu-icon main-nav__submenu-icon--1"></span>
+									<span class="main-nav__submenu-link-text">Электронные документы</span>
+								</a>
+							</li>
+							<li class="main-nav__submenu-item">
+								<a href="#" class="main-nav__submenu-link">
+									<span class="main-nav__submenu-icon main-nav__submenu-icon--2"></span>
+									<span class="main-nav__submenu-link-text">Отчётность через интернет</span>
+								</a>
+							</li>
+							<li class="main-nav__submenu-item">
+								<a href="#" class="main-nav__submenu-link">
+									<span class="main-nav__submenu-icon main-nav__submenu-icon--3"></span>
+									<span class="main-nav__submenu-link-text">Всё о&nbsp;компаниях и&nbsp;владельцах</span>
+								</a>
+							</li>
+							<li class="main-nav__submenu-item">
+								<a href="#" class="main-nav__submenu-link">
+									<span class="main-nav__submenu-icon main-nav__submenu-icon--4"></span>
+									<span class="main-nav__submenu-link-text">Поиск и&nbsp;анализ закупок</span>
+								</a>
+							</li>
+							<li class="main-nav__submenu-item">
+								<a href="#" class="main-nav__submenu-link">
+									<span class="main-nav__submenu-icon main-nav__submenu-icon--5"></span>
+									<span class="main-nav__submenu-link-text">ОФД и&nbsp;онлайн-кассы</span>
+								</a>
+							</li>
+							<li class="main-nav__submenu-item">
+								<a href="#" class="main-nav__submenu-link">
+									<span class="main-nav__submenu-icon main-nav__submenu-icon--6"></span>
+									<span class="main-nav__submenu-link-text">Для магазинов и&nbsp;аптек</span>
+								</a>
+							</li>
+							<li class="main-nav__submenu-item">
+								<a href="#" class="main-nav__submenu-link">
+									<span class="main-nav__submenu-icon main-nav__submenu-icon--7"></span>
+									<span class="main-nav__submenu-link-text">Для ресторанов, кафе и&nbsp;столовых</span>
+								</a>
+							</li>
+							<li class="main-nav__submenu-item">
+								<a href="#" class="main-nav__submenu-link">
+									<span class="main-nav__submenu-icon main-nav__submenu-icon--8"></span>
+									<span class="main-nav__submenu-link-text">Для салонов и&nbsp;сферы услуг</span>
+								</a>
+							</li>
+							<li class="main-nav__submenu-item">
+								<a href="#" class="main-nav__submenu-link">
+									<span class="main-nav__submenu-icon main-nav__submenu-icon--9"></span>
+									<span class="main-nav__submenu-link-text">Заказы и&nbsp;поставки (EDI)</span>
+								</a>
+							</li>
+							<li class="main-nav__submenu-item">
+								<a href="#" class="main-nav__submenu-link">
+									<span class="main-nav__submenu-icon main-nav__submenu-icon--10"></span>
+									<span class="main-nav__submenu-link-text">Управление бизнес-процессами</span>
+								</a>
+							</li>
+							<li class="main-nav__submenu-item">
+								<a href="#" class="main-nav__submenu-link">
+									<span class="main-nav__submenu-icon main-nav__submenu-icon--11"></span>
+									<span class="main-nav__submenu-link-text">CRM</span>
+								</a>
+							</li>
+							<li class="main-nav__submenu-item">
+								<a href="#" class="main-nav__submenu-link">
+									<span class="main-nav__submenu-icon main-nav__submenu-icon--12"></span>
+									<span class="main-nav__submenu-link-text">Корпоративная социальная сеть</span>
+								</a>
+							</li>
+							<li class="main-nav__submenu-item">
+								<a href="#" class="main-nav__submenu-link">
+									<span class="main-nav__submenu-icon main-nav__submenu-icon--13"></span>
+									<span class="main-nav__submenu-link-text">Управление персоналом</span>
+								</a>
+							</li>
+							<li class="main-nav__submenu-item">
+								<a href="#" class="main-nav__submenu-link">
+									<span class="main-nav__submenu-icon main-nav__submenu-icon--14"></span>
+									<span class="main-nav__submenu-link-text">Учет и&nbsp;контроль рабочего времени</span>
+								</a>
+							</li>
+							<li class="main-nav__submenu-item">
+								<a href="#" class="main-nav__submenu-link">
+									<span class="main-nav__submenu-icon main-nav__submenu-icon--15"></span>
+									<span class="main-nav__submenu-link-text">Бухгалтерия и&nbsp;учет</span>
+								</a>
+							</li>
+							<li class="main-nav__submenu-item">
+								<a href="#" class="main-nav__submenu-link">
+									<span class="main-nav__submenu-icon main-nav__submenu-icon--16"></span>
+									<span class="main-nav__submenu-link-text">Корпоративный удостоверяющий центр</span>
+								</a>
+							</li>
+							<li class="main-nav__submenu-item">
+								<a href="#" class="main-nav__submenu-link">
+									<span class="main-nav__submenu-icon main-nav__submenu-icon--17"></span>
+									<span class="main-nav__submenu-link-text">Видео-коммуникации</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
 		</div>
 	</header>
 
 	<main class="page-main">
 		<div class="container">
 			<ul class="breadcrumps">
-				<li class="breadcrumps__item"><a href="#" class="icon__home" title="На главную"></a></li>
-				<span class="icon__arrow-right"></span>
+				<li class="breadcrumps__item"><a href="#" class="icon__home" title="На главную"></a>
+					<span class="icon__arrow-right"></span>
+				</li>
 				<li class="breadcrumps__item"><a href="#" class="breadcrumps__link">Обязательная маркировка товаров</a></li>
 			</ul>
 			
@@ -118,11 +209,11 @@
 								<li class="article__item article__item--menu"><a href="#national-catalog" class="article__link">Что такое Национальный каталог товаров</a></li>
 								<li class="article__item article__item--menu"><a href="#marking-code" class="article__link">Код маркировки: что это и&nbsp;как выглядит?</a></li>
 								<li class="article__item article__item--menu"><a href="#marking-products" class="article__link">Перечень товаров, подлежащих маркировке</a></li>
-								<li class="article__item article__item--menu"><a href="#prepare" class="article__link">Как подключиться к&nbsp;системе маркировки</a></li>
+								<li class="article__item article__item--menu"><a href="#prepare" class="article__link">Как подключиться к&nbsp;системе маркировки</a>
 								<ul class="article__sublist">
 									<li class="article__item article__item--menu"><a href="#retail" class="article__link">Розничный магазин</a></li>
 									<li class="article__item article__item--menu"><a href="#distributors" class="article__link">Дистрибьюторы</a></li>
-								</ul>
+								</ul></li>
 								<li class="article__item article__item--menu"><a href="#faq" class="article__link">Частые вопросы</a></li>
 							</ol>
 						</section>
@@ -141,20 +232,19 @@
 									<span class="article__text--law">
 										<a href="http://www.consultant.ru/document/cons_doc_LAW_314270" class="article__link">Федеральный закон от&nbsp;25.12.2018&nbsp;N 488-ФЗ</a> внёс изменения в&nbsp;381-ФЗ о&nbsp;торговле и&nbsp;54-ФЗ о&nbsp;кассах:
 									</span>
-								</li>
 									<ul class="article__sublist article__sublist--law">
 										<li class="article__item">- вводит понятия&nbsp;&mdash; &laquo;товары, подлежащие обязательной маркировке&raquo;, &laquo;средства идентификации&raquo;, &laquo;код маркировки&raquo;, &laquo;участники оборота товаров, подлежащих обязательной маркировке&raquo;;</li>
 										<li class="article__item">- определяет государственную информационную систему мониторинга за&nbsp;оборотом маркированной продукции, порядок доступа к&nbsp;ней, обязанности участников оборота;</li>
 										<li class="article__item">- устанавливает, что ОФД передает данные в&nbsp;систему маркировки.</li>
 									</ul>
+									</li>
 								<li class="article__item article__item--law">
 									<span class="article__text--law"><a href="http://static.government.ru/media/files/4ctSSAndNn8M2QLeJbwaFAQRMLMUgnVr.pdf" class="article__link">Распоряжение от&nbsp;28.04.2018 &#8470;&nbsp;791-р</a> утвердило:</span>
-								</li>
 								<ul class="article__sublist article__sublist--law">
 									<li class="article__item">- идентификацию каждого товара уникальными кодами,</li>
 									<li class="article__item">- создание единой информационной системы, в&nbsp;которой будут храниться данные, передаваемые всеми участниками оборота,</li>
 									<li class="article__item">- создание Единого каталога товаров.</li>
-								</ul>
+								</ul></li>
 							</ul>
 						</section>
 					
@@ -345,7 +435,7 @@
 						<section class="article__section prepare" id="prepare">
 							<h2 class="article__title-h2">Как подключиться к&nbsp;системе маркировки</h2>
 							<p class="article__text">
-								Для регистрации нужна усиленная квалифицированная электронная подпись на&nbsp;носителе Рутокен.<br>
+								Всем участникам оборота необходимо зарегистрироваться на&nbsp;сайте Честныйзнак.рф. Для регистрации нужна усиленная квалифицированная электронная подпись на&nbsp;носителе Рутокен.<br>
 								<a class="article__link" href="#">Получить электронную подпись<span class="icon__small-arrow-right"></span></a>
 							</p>
 							<ol class="article__o-list">
@@ -354,12 +444,12 @@
 									<ul class="article__sublist prepare__sublist">
 										<li class="article__item">- операционная система Windows 7&nbsp;/ Mac OS&nbsp;X&nbsp;10.8 или новее</li>
 										<li class="article__item">- браузер Google Chrome, Mozilla Firefox, Opera, Internet Explorer&nbsp;11, Safari</li>
-										<li class="article__item">- плагин <a class="article__link" href="https://www.cryptopro.ru/user?destination=node/148">КриптоПро</a>, <a class="article__link" href="https://www.rutoken.ru">Рутокен</a> или <a class="article__link" href="https://infotecs.ru/downloads/besplatnye-produkty">VipNet</a></li>
+										<li class="article__item">- плагин <a class="article__link" href="https://www.cryptopro.ru/user?destination=node/148" target="_blank">КриптоПро</a>, <a class="article__link" href="https://www.rutoken.ru">Рутокен</a> или <a class="article__link" href="https://infotecs.ru/downloads/besplatnye-produkty" target="_blank">VipNet</a></li>
 										<li class="article__item">- сертифицированное СКЗИ.</li>
 									</ul>
 								</li>
 								<li class="article__item">
-									Откройте сайт <a class="article__link" href="https://markirovka.crpt.ru/register">Честный знак</a> и&nbsp;нажмите &laquo;Зарегистрируйтесь&raquo;. Убедитесь, что вы&nbsp;все настроили правильно, и&nbsp;нажмите &laquo;Продолжить&raquo;.
+									Откройте сайт <a class="article__link" href="https://markirovka.crpt.ru/register" target="_blank">Честный знак</a> и&nbsp;нажмите &laquo;Зарегистрируйтесь&raquo;. Убедитесь, что вы&nbsp;все настроили правильно, и&nbsp;нажмите &laquo;Продолжить&raquo;.
 								</li>
 								<li class="article__item">
 									Выберите электронную подпись, укажите контактный телефон и&nbsp;email и&nbsp;нажмите &laquo;Отправить заявку&raquo;. В&nbsp;течение 24&nbsp;часов на&nbsp;электронную почту придет письмо со&nbsp;ссылкой на&nbsp;подтверждение регистрации.
@@ -392,7 +482,7 @@
 							<section class="banner">
 								<div class="container__banner">
 									<h2 class="article__title-h2 banner__title">Маркировка под ключ</h2>
-									<a href="#" class="banner__link"><spa class="banner__order">Оставить заявку</spa><span class="icon__small-arrow-right icon__small-arrow-right--white"></span></a>
+									<a href="#" class="banner__link"><span class="banner__order">Оставить заявку</span><span class="icon__small-arrow-right icon__small-arrow-right--white"></span></a>
 								</div>
 							</section>
 							<h3 class="retail__title-h3">Как принимать</h3>
@@ -420,11 +510,11 @@
 							</p>
 						</section>
 						<section class="article__section equipment">
-							<h3 class="article__title-h3">Оборудование для ввода и&nbsp;проверки марок</h3>
+							<h3 class="article__title-h3 equipment__title-h3">Оборудование для ввода и&nbsp;проверки марок</h3>
 							<ul class="article__list">
 								<li class="equipment__item">
 									<div class="equipment__container">
-										<a href="https://play.google.com/store/apps/details?id=ru.tensor.sbis.storekeeper" class="equipment__link">
+										<a href="https://play.google.com/store/apps/details?id=ru.tensor.sbis.storekeeper" class="equipment__link" target="_blank">
 											<h4 class="article__title-h4 equipment__title">Приложение на&nbsp;ваш смартфон</h4>
 											<div class="equipment__wrapper">
 												<span class="equipment__price">Бесплатно</span>
@@ -435,7 +525,7 @@
 										</a>
 										<p class="equipment__text">
 											<u>Для небольших складов</u><br>
-											Просто установите приложение <a class="article__link article__link--equipment" href="https://play.google.com/store/apps/details?id=ru.tensor.sbis.storekeeper">СБИС на складе</a>.
+											Просто установите приложение <span class="article__link article__link--equipment">СБИС на складе</span>.
 										</p>
 										<ul class="equipment__list">
 											<li class="equipment__subitem">+ приложение бесплатное</li>
@@ -445,7 +535,7 @@
 											<li class="equipment__subitem">- неударопрочный</li>
 										</ul>
 									</div>
-									<div class="equipment__image-wrapper">
+									<div class="equipment__image-wrapper equipment__image-wrapper--good-1">
 										<img class="equipment__image" src="img/good-1.png" alt="Приложение для маркировки">
 									</div>
 								</li>
@@ -558,141 +648,141 @@
 							<h3 class="feedback__title">Клиенты о нас</h3>
 							<ul class="feedback__list">
 								<li class="feedback__item">
-									<cite class="feedback__author">
+									<div class="feedback__author">
 										<div class="feedback__wrapper">
 											<span class="feedback__name">Сухова Ирина</span>
 											<span class="feedback__city">г.&nbsp;Бийск</span>
 										</div>
 										<span class="feedback__profession">ИП</span>
-									</cite>
+									</div>
 									<blockquote class="feedback__text">
 										Отчет сдали с&nbsp;первого раза, спасибо. Техподдержка отвечает всегда, проблем нет.
 									</blockquote>
 								</li>
 								<li class="feedback__item">
-									<cite class="feedback__author">
+									<div class="feedback__author">
 										<div class="feedback__wrapper">
 											<span class="feedback__name">Новикова Наталья</span>
 											<span class="feedback__city">г.&nbsp;Абакан</span>
 										</div>
 										<span class="feedback__profession">ООО&nbsp;&laquo;Парадиз&raquo;</span>
-									</cite>
+									</div>
 									<blockquote class="feedback__text">
 										Спасибо за&nbsp;онлайн-вебинар по&nbsp;трудовым книжкам, самый понятный из&nbsp;всех, что предлагалось. Информационная поддержка просто на&nbsp;уровне космической оперативности.
 									</blockquote>
 								</li>
 								<li class="feedback__item">
-									<cite class="feedback__author">
+									<div class="feedback__author">
 										<div class="feedback__wrapper">
 											<span class="feedback__name">Шилина Алла</span>
 											<span class="feedback__city">г.&nbsp;Курск</span>
 										</div>
 										<span class="feedback__profession">ООО&nbsp;&laquo;Спутник&raquo;</span>
-									</cite>
+									</div>
 									<blockquote class="feedback__text">
 										Ура!!! Даешь в&nbsp;марте 1&nbsp;570&nbsp;000 отчетов и&nbsp;в&nbsp;честь Вас движение назовут.
 									</blockquote>
 								</li>
 
 								<li class="feedback__item">
-									<cite class="feedback__author">
+									<div class="feedback__author">
 										<div class="feedback__wrapper">
 											<span class="feedback__name">Новикова Наталья</span>
 											<span class="feedback__city">г.&nbsp;Абакан</span>
 										</div>
 										<span class="feedback__profession">ООО&nbsp;&laquo;Парадиз&raquo;</span>
-									</cite>
+									</div>
 									<blockquote class="feedback__text">
 										Спасибо техподдержке за&nbsp;то, что помогли оперативно через удаленный доступ. ПФР г.&nbsp;Москвы быстро зарегистрировали заявление по&nbsp;УПД электронно прямо в&nbsp;день подачи. А&nbsp;ПФР г.&nbsp;Курска через день. Отчет по&nbsp;трудовой книге сдали сразу (был прием на&nbsp;работу). Спасибо.
 									</blockquote>
 								</li>
 
 								<li class="feedback__item">
-									<cite class="feedback__author">
+									<div class="feedback__author">
 										<div class="feedback__wrapper">
 											<span class="feedback__name">Игнатов Александр</span>
 											<span class="feedback__city">г.&nbsp;Красноярск</span>
 										</div>
 										<span class="feedback__profession">ООО&nbsp;&laquo;Фабрика мороженого Славица&raquo;</span>
-									</cite>
+									</div>
 									<blockquote class="feedback__text">
 										Отчет сдали с&nbsp;первого раза! Спасибо СБИС!!!<span class="feedback__smile"></span>
 									</blockquote>
 								</li>
 
 								<li class="feedback__item feedback__item--hidden">
-									<cite class="feedback__author">
+									<div class="feedback__author">
 										<div class="feedback__wrapper">
 											<span class="feedback__name">Рачков Игорь</span>
 											<span class="feedback__city">СНТ&nbsp;&laquo;Новое&raquo;</span>
 										</div>
 										<span class="feedback__profession">&laquo;Яблоневый сад&nbsp;№1&raquo;</span>
-									</cite>
+									</div>
 									<blockquote class="feedback__text">
 										Сбис молодцы. Нас держала 1С. А&nbsp;сбисовцы сами предупредили о&nbsp;заявлении на&nbsp;подключение, даже помогли заполнить и&nbsp;отправить. А&nbsp;затем все как по&nbsp;маслу&nbsp;&mdash; 1С-СБИС-ПФР. Так держать!
 									</blockquote>
 								</li>
 
 								<li class="feedback__item feedback__item--hidden">
-									<cite class="feedback__author">
+									<div class="feedback__author">
 										<div class="feedback__wrapper">
 											<span class="feedback__name">Рязанцева Марина</span>
 											<span class="feedback__city">г.&nbsp;Новосибирск</span>
 										</div>
 										<span class="feedback__profession">ИП</span>
-									</cite>
+									</div>
 									<blockquote class="feedback__text">
 										Спасибо Вам огромное за помощь в заполнении заявления и исправлении ошибок в форме СЗВ-ТД, без вас бы не справилась.<span class="feedback__smile"></span>
 									</blockquote>
 								</li>
 
 								<li class="feedback__item feedback__item--hidden">
-									<cite class="feedback__author">
+									<div class="feedback__author">
 										<div class="feedback__wrapper">
 											<span class="feedback__name">Ярахмедова Зейнаб</span>
 											<span class="feedback__city">г.&nbsp;Махачкала</span>
 										</div>
 										<span class="feedback__profession">Компания &laquo;Интерсвязь&raquo;, ООО</span>
-									</cite>
+									</div>
 									<blockquote class="feedback__text">
 										Круто, но&nbsp;были недоработки. Через программу 2.4 приходил отказ, при обновлении&nbsp;&mdash; ошибка, либо программа просила обновить форму. А&nbsp;вот через онлайн&nbsp;&mdash; все шикарно.
 									</blockquote>
 								</li>
 
 								<li class="feedback__item feedback__item--hidden">
-									<cite class="feedback__author">
+									<div class="feedback__author">
 										<div class="feedback__wrapper">
 											<span class="feedback__name">Беседин Владимир</span>
 											<span class="feedback__city">г.&nbsp;Курск</span>
 										</div>
 										<span class="feedback__profession">ОБУ&nbsp;СШОР&nbsp;&laquo;Урожай&raquo;, ГБУСРФ</span>
-									</cite>
+									</div>
 									<blockquote class="feedback__text">
 										Отчет сдали быстро, ответ пришел буквально через полчаса, очень довольны.
 									</blockquote>
 								</li>
 
 								<li class="feedback__item feedback__item--hidden">
-									<cite class="feedback__author">
+									<div class="feedback__author">
 										<div class="feedback__wrapper">
 											<span class="feedback__name">Городилова Елена</span>
 											<span class="feedback__city">г.&nbsp;Нижний Тагил</span>
 										</div>
 										<span class="feedback__profession">МАДОУ&nbsp;&laquo;Радость&raquo;</span>
-									</cite>
+									</div>
 									<blockquote class="feedback__text">
 										В&nbsp;нашем первом отчете было 283&nbsp;записи! Отчет зашел с&nbsp;первого раза! У&nbsp;нас нареканий нет, все работает отлично!
 									</blockquote>
 								</li>
 
 								<li class="feedback__item feedback__item--hidden">
-									<cite class="feedback__author">
+									<div class="feedback__author">
 										<div class="feedback__wrapper">
 											<span class="feedback__name">Хоботова Ирина</span>
 											<span class="feedback__city">г.&nbsp;Москва</span>
 										</div>
 										<span class="feedback__profession">&laquo;Олимпия Бизнес Трэвел&raquo;, ООО</span>
-									</cite>
+									</div>
 									<blockquote class="feedback__text">
 										Сдали все сразу и без проблем.<br>Спасибо.<span class="feedback__smile"></span>
 									</blockquote>
@@ -841,10 +931,6 @@
 					</div>
 
 				</div>
-				<ul class="webinars__pagination">
-					<li class="webinars__pagination-item webinars__pagination-item--active">1</li>
-					<li class="webinars__pagination-item">2</li>
-				</ul>
 			</section>
 		</div>
 	</main>
@@ -855,7 +941,7 @@
 
 				<div class="container__footer-menu">
 					<div class="footer-menu__column">
-						<h3 class="footer-menu__title">Сервисы</h3>
+						<h3 class="footer-menu__title"><span class="icon__right-arrow"></span>Сервисы</h3>
 						<ul class="footer-menu__list">
 							<li class="footer-menu__item"><a href="#" class="footer-menu__link">Электронный документооборот</a></li>
 							<li class="footer-menu__item"><a href="#" class="footer-menu__link">Отчетность через интернет</a></li>
@@ -881,33 +967,37 @@
 					</div>
 					
 					<div class="footer-menu__column">
-						<h3 class="footer-menu__title">Отраслевые решения</h3>
-						<ul class="footer-menu__list">
-							<li class="footer-menu__item"><a href="#" class="footer-menu__link">Энергетика и&nbsp;ЖКХ</a></li>
-							<li class="footer-menu__item"><a href="#" class="footer-menu__link">Фармацевтика</a></li>
-							<li class="footer-menu__item"><a href="#" class="footer-menu__link">Телекоммуникации</a></li>
-							<li class="footer-menu__item"><a href="#" class="footer-menu__link">Производство</a></li>
-							<li class="footer-menu__item"><a href="#" class="footer-menu__link">Логистика</a></li>
-							<li class="footer-menu__item"><a href="#" class="footer-menu__link">Ритейл и&nbsp;общепит</a></li>
-							<li class="footer-menu__item"><a href="#" class="footer-menu__link">Банки</a></li>
-							<li class="footer-menu__item"><a href="#" class="footer-menu__link">Факторинг</a></li>
-						</ul>
-						<h3 class="footer-menu__title">Маркировка</h3>
-						<ul class="footer-menu__list footer-menu__list--with-sublist">
-							<li class="footer-menu__item"><a href="#" class="footer-menu__link">Алкоголь</a></li>
-							<li class="footer-menu__item"><a href="#" class="footer-menu__link">Табак</a></li>
-							<li class="footer-menu__item"><a href="#" class="footer-menu__link">Меркурий</a></li>
-							<li class="footer-menu__item"><a href="#" class="footer-menu__link">Лекарства</a></li>
-							<li class="footer-menu__item"><a href="#" class="footer-menu__link">Обувь</a></li>
-							<li class="footer-menu__item"><a href="#" class="footer-menu__link">Одежда</a></li>
-						</ul>
-						<ul class="footer-menu__sublist">
-							<li class="footer-menu__item"><a href="#" class="footer-menu__link">Запрет ЕНВД и&nbsp;ПСН на&nbsp;продажу маркировки</a></li>
-						</ul>
+						<div>
+							<h3 class="footer-menu__title"><span class="icon__right-arrow"></span>Отраслевые решения</h3>
+							<ul class="footer-menu__list">
+								<li class="footer-menu__item"><a href="#" class="footer-menu__link">Энергетика и&nbsp;ЖКХ</a></li>
+								<li class="footer-menu__item"><a href="#" class="footer-menu__link">Фармацевтика</a></li>
+								<li class="footer-menu__item"><a href="#" class="footer-menu__link">Телекоммуникации</a></li>
+								<li class="footer-menu__item"><a href="#" class="footer-menu__link">Производство</a></li>
+								<li class="footer-menu__item"><a href="#" class="footer-menu__link">Логистика</a></li>
+								<li class="footer-menu__item"><a href="#" class="footer-menu__link">Ритейл и&nbsp;общепит</a></li>
+								<li class="footer-menu__item"><a href="#" class="footer-menu__link">Банки</a></li>
+								<li class="footer-menu__item"><a href="#" class="footer-menu__link">Факторинг</a></li>
+							</ul>
+						</div>
+						<div>
+							<h3 class="footer-menu__title"><span class="icon__right-arrow"></span>Маркировка</h3>
+							<ul class="footer-menu__list footer-menu__list--with-sublist">
+								<li class="footer-menu__item"><a href="#" class="footer-menu__link">Алкоголь</a></li>
+								<li class="footer-menu__item"><a href="#" class="footer-menu__link">Табак</a></li>
+								<li class="footer-menu__item"><a href="#" class="footer-menu__link">Меркурий</a></li>
+								<li class="footer-menu__item"><a href="#" class="footer-menu__link">Лекарства</a></li>
+								<li class="footer-menu__item"><a href="#" class="footer-menu__link">Обувь</a></li>
+								<li class="footer-menu__item"><a href="#" class="footer-menu__link">Одежда</a></li>
+							</ul>
+							<ul class="footer-menu__sublist">
+								<li class="footer-menu__item"><a href="#" class="footer-menu__link">Запрет ЕНВД и&nbsp;ПСН на&nbsp;продажу маркировки</a></li>
+							</ul>
+						</div>
 					</div>
 					
 					<div class="footer-menu__column">
-						<h3 class="footer-menu__title">Оборудование</h3>
+						<h3 class="footer-menu__title"><span class="icon__right-arrow"></span>Оборудование</h3>
 						<ul class="footer-menu__list footer-menu__list--with-sublist">
 							<li class="footer-menu__item"><a href="#" class="footer-menu__link">Комплекты оборудования</a></li>
 							<li class="footer-menu__item"><a href="#" class="footer-menu__link">Онлайн-кассы</a></li>
@@ -933,7 +1023,7 @@
 					</div>
 					
 					<div class="footer-menu__column">
-						<h3 class="footer-menu__title">Компания</h3>
+						<h3 class="footer-menu__title"><span class="icon__right-arrow"></span>Компания</h3>
 						<ul class="footer-menu__list footer-menu__list--with-sublist">
 							<li class="footer-menu__item"><a href="#" class="footer-menu__link">О&nbsp;разработчике</a></li>
 							<li class="footer-menu__item"><a href="#" class="footer-menu__link">Лицензии и&nbsp;сертификаты</a></li>
@@ -953,7 +1043,7 @@
 					</div>
 
 					<div class="footer-menu__column">
-						<h3 class="footer-menu__title">Полезное</h3>
+						<h3 class="footer-menu__title"><span class="icon__right-arrow"></span>Полезное</h3>
 						<ul class="footer-menu__list">
 							<li class="footer-menu__item"><a href="#" class="footer-menu__link">Как заполнить отчеты</a></li>
 							<li class="footer-menu__item"><a href="#" class="footer-menu__link">Форматы первичных документов</a></li>
@@ -969,6 +1059,7 @@
 			
 			<section class="contacts">
 				<div class="container__contacts">
+					<h3 class="visually-hidden">Наши контакты</h3>
 					<div class="container__adress">
 						<ul class="contacts__address-list">
 							<li class="contacts__address">
@@ -1142,6 +1233,11 @@
 			<p class="copyright">&copy;&nbsp;2003-2017&nbsp;Тензор, CБиС</p>
 		</div>
 	</footer>
-	<script type="text/javascript" src="js/script.js"></script>
+
+	<div class="overlay"></div>
+
+	<script type="text/javascript" src="js/script.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
 </body>
 </html>

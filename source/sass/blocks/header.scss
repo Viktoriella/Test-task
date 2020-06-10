@@ -1,9 +1,8 @@
 .header {
-	position: fixed;
-	width: 100%;
-	background-color: #ffffff;
-	box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-	z-index: 3;
+	// position: fixed;
+	// width: 100%;
+	// background-color: #ffffff;
+	// z-index: 3;
 }
 
 .header__logo {
@@ -11,6 +10,27 @@
 	font-size: 0;
 	text-decoration: none;
 	line-height: 0;
+}
+
+.header__logo-image {
+	width: 106px;
+	height: 41px;
+	transition: all 0.3s ease;
+
+	@media (max-width: $small-tablet-width) {
+		width: 95px;
+		height: 36px;
+	}
+}
+
+.container__header--scrolled .header__logo-image {
+	width: 73px;
+    height: 28px;
+
+    @media (max-width: $small-tablet-width) {
+		width: 95px;
+		height: 36px;
+	}
 }
 
 .header__heading {
@@ -21,10 +41,19 @@
 	font-size: 20px;
 	line-height: 20px;
 	white-space: nowrap;
+	transition: all 0.3s ease;
 
 	&:hover,
 	&:active {
 		color: $dark-blue;
 		border-bottom: 1px solid $dark-blue;
 	}
+
+	@media (max-width: $small-tablet-width) {
+		@include visually-hidden();
+	}
+}
+
+.container__header--scrolled .header__heading {
+	font-size: 18px;
 }

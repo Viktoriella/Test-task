@@ -3,6 +3,10 @@
 	display: flex;
 	align-items: baseline;
 	margin-bottom: 5px;
+
+	@media (max-width: $small-tablet-width) {
+		@include visually-hidden();
+	}
 }
 
 .breadcrumps__link {

@@ -5,7 +5,7 @@
 	padding-left: 24px;
     padding-right: 24px;
 
-    @media (max-width: $smaller-tablet-width) {
+    @media (max-width: $small-tablet-width) {
 		padding-left: 16px;
     	padding-right: 16px;
 	}
@@ -43,7 +43,7 @@
 
 .container__sidebar {
 	box-sizing: border-box;
-	flex-basis: 25%;
+	flex-basis: 306px;
 	padding-left: 12px;
 	padding-right: 12px;
 
@@ -51,16 +51,80 @@
 		width: 100%;
 		margin-left: 0;
 	}
+
+	@media (max-width: $small-tablet-width) {
+		padding-left: 0;
+		padding-right: 0;	
+	}
 }
 
 .container__header {
-	position: relative;
-	z-index: 1;
+	position: fixed;
+	width: 100%;
+	background-color: #ffffff;
+	z-index: 12;
+	padding-top: 16px;
+	transition: all 0.3s ease;
+
+	@media (max-width: $small-tablet-width) {
+		padding-top: 8px;
+		box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+	}
+}
+
+.header__wrapper {
 	display: flex;
 	justify-content: space-between;
 	align-items: baseline;
-	padding-top: 20px;
-	padding-bottom: 20px;
+
+	@media (max-width: $br-900) {
+		padding-bottom: 22px;
+	}
+
+	@media (max-width: $small-tablet-width) {
+		padding-bottom: 12px;
+	}
+}
+
+.container__header--show .header__wrapper {
+	border-bottom: 1px dotted #e4e4e4;
+
+	@media (max-width: $small-tablet-width) {
+		border-bottom: none;
+	}
+}
+
+.container__header--scrolled .header__wrapper {
+	@media (max-width: $br-900) {
+		padding-bottom: 12px;
+	}
+}
+
+.container__header--scrolled {
+	padding-top: 0;
+	box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+
+	@media (max-width: $small-tablet-width) {
+		padding-top: 8px;
+	}
+}
+
+.container__header--scrolled.container__header--show {
+	box-shadow: none;
+
+	@media (max-width: $small-tablet-width) {
+		box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+	}
+}
+
+.container__header--scrolled ~ .main-nav__submenu {
+	@media (max-width: $br-900) {
+		padding-top: 50px;
+	}
+
+	@media (max-width: $small-tablet-width) {
+		padding-top: 56px;
+	}
 }
 
 .container__nav {
@@ -86,11 +150,14 @@
 	box-shadow: 0 5px 10px rgba(0,0,0,.2);
 	margin-top: 24px;
 	margin-bottom: 32px;
-	margin-left: -16px;
-	margin-right: -16px;
+	margin-left: 0;
+	margin-right: 0;
 
 	@media (max-width: $small-tablet-width) {
 		display: block;
+		margin-left: -16px;
+		margin-right: -16px;
+		padding-left: 40px;
 	}
 }
 
@@ -103,6 +170,8 @@
 
 	@media (max-width: $small-tablet-width) {
 		display: block;
+		margin-left: -16px;
+		margin-right: -16px;
 	}
 }
 

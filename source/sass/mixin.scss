@@ -9,6 +9,12 @@
 	padding: 0;
 }
 
+@mixin adaptive-font($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$max-width: $max-width - 320;
+	font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$max-width}));
+}
+
 @mixin sprite($x: 0, $y: 0, $width: 0, $height: 0) {
     background-position: $x $y;
     width: $width;

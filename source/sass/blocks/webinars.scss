@@ -1,5 +1,9 @@
 .webinars {
 	margin-bottom: 90px;
+
+	@media (max-width: $smaller-tablet-width) {
+		margin-bottom: 60px;
+	}
 }
 
 .webinars__title {
@@ -12,12 +16,53 @@
 }
 
 .webinars__slider {
+	width: 1168px;
 	position: relative;
 	display: flex;
 	justify-content: space-between;
 	margin-left: -8px;
 	margin-right: -8px;
 	overflow: hidden;
+	padding-bottom: 30px;
+
+	@media (max-width: $desktop-width) {
+		width: 1010px;
+	}
+
+	@media (max-width: $tablet-width) {
+		width: 790px;
+	}
+
+	@media (max-width: $smaller-tablet-width) {
+		width: 660px;
+	}
+
+	@media (max-width: $small-tablet-width) {
+		width: 315px;
+	}
+}
+
+.webinar__wrapper {
+	box-sizing: border-box;
+	width: 292px !important;
+	padding-left: 8px;
+	padding-right: 8px;
+
+	@media (max-width: $desktop-width) {
+		width: 252px !important;
+	}
+
+	@media (max-width: $tablet-width) {
+		width: 263px !important;
+	}
+
+	@media (max-width: $smaller-tablet-width) {
+		width: 330px !important;
+	}
+
+	@media (max-width: $small-tablet-width) {
+		width: 310px !important;
+	}
 }
 
 .webinars__pagination {
@@ -30,10 +75,22 @@
 	height: 14px;
 	left: 50%;
 	transform: translateX(-50%);
-	margin-top: 16px;
+	bottom: 0;
+
+	@media (max-width: $tablet-width) {
+		width: 45px;
+	}
+
+	@media (max-width: $smaller-tablet-width) {
+		width: 60px;
+	}
+
+	@media (max-width: $small-tablet-width) {
+		width: 120px;
+	}
 }
 
-.webinars__pagination-item {
+.webinars__pagination li {
 	cursor: pointer;
 	font-size: 0;
 	line-height: 0;
@@ -43,17 +100,23 @@
 	border-radius: 50%;
 }
 
-.webinars__pagination-item--active {
+.webinars__pagination li.slick-active {
 	width: 13px;
 	height: 13px;
 	background-color: $blue;
+	cursor: auto;
 }
 
-.webinar__wrapper {
-	box-sizing: border-box;
-	flex-basis: 25%;
-	padding-left: 8px;
-	padding-right: 8px;
+.webinars__pagination li button {
+	background-color: transparent;
+	border: none;
+	outline: none;
+}
+
+.slick-track {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 .webinar {
@@ -97,6 +160,18 @@
 		pointer-events: auto;
 		content: "";
 		background-color: rgba(0, 0, 0, 0);
+	}
+
+	@media (max-width: $desktop-width) {
+		min-height: 100px;
+	}
+
+	@media (max-width: $tablet-width) {
+		min-height: 80px;
+	}
+
+	@media (max-width: $smaller-tablet-width) {
+		min-height: 55px;
 	}
 }
 
