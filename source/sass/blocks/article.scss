@@ -6,6 +6,11 @@
 	}
 }
 
+.article__section--anchor {
+	padding-top: 60px;
+	margin-top: -60px;
+}
+
 .article__title-h1 {
 	@include reset();
 	color: #000000;
